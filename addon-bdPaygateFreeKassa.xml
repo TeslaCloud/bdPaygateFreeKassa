@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="bdPaygateFreeKassa" title="[bd] Paygates: FreeKassa" version_string="1.0" version_id="6" url="https://teslacloud.net" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="load_class_controller" execute_order="10" callback_class="bdPaygateFreeKassa_Listener" callback_method="load_class" active="1" hint="" description=""/>
+    <listener event_id="load_class_model" execute_order="10" callback_class="bdPaygateFreeKassa_Listener" callback_method="load_class" active="1" hint="" description=""/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="bdPaygateFreeKassa" display_order="9999" debug_only="0"/>
+    <option option_id="bdPaygateFreeKassa_ID" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="bdPaygateFreeKassa" display_order="10"/>
+    </option>
+    <option option_id="bdPaygateFreeKassa_SecretKey" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="bdPaygateFreeKassa" display_order="20"/>
+    </option>
+    <option option_id="bdPaygateFreeKassa_SecretKey_2" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="bdPaygateFreeKassa" display_order="30"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="bdpaygate_freekassa_call_to_action" version_id="6" version_string="1.0"><![CDATA[Pay with FreeKassa]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_ID" version_id="6" version_string="1.0"><![CDATA[Merchant Id]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_ID_explain" version_id="6" version_string="1.0"><![CDATA[FreeKassa]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_SecretKey" version_id="6" version_string="1.0"><![CDATA[Secret Key #1]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_SecretKey_2" version_id="6" version_string="1.0"><![CDATA[Secret Key #2]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_SecretKey_2_explain" version_id="6" version_string="1.0"><![CDATA[FreeKassa]]></phrase>
+    <phrase title="option_bdPaygateFreeKassa_SecretKey_explain" version_id="6" version_string="1.0"><![CDATA[FreeKassa]]></phrase>
+    <phrase title="option_group_bdPaygateFreeKassa" version_id="6" version_string="1.0"><![CDATA[[bd] Paygates: FreeKassa]]></phrase>
+    <phrase title="option_group_bdPaygateFreeKassa_description" version_id="6" version_string="1.0"><![CDATA[]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates/>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
