@@ -6,6 +6,7 @@ class bdPaygateFreeKassa_Listener
 	{
 		static $classes = array(
 			'bdPaygate_Model_Processor',
+            'Audentio_DonationManager_Model_Campaign',
 		
 			'XenForo_ControllerAdmin_UserUpgrade',
 			'XenForo_Model_Option',

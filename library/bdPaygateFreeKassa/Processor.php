@@ -35,6 +35,10 @@ class bdPaygateFreeKassa_Processor extends bdPaygate_Processor_Abstract
         $input = new XenForo_Input($request);
         $transactionDetails = $input->getInput();
 
+        if(empty($transactionDetails['SIGN'])) {
+            $this->_setError("Transaction signature is empty");
+            return false;
+        }
         $signature = $transactionDetails['SIGN'];
 
         $transactionId = (!empty($transactionDetails['intid']) ? ('freekassa_' . $transactionDetails['intid']) : '');
@@ -56,11 +60,11 @@ class bdPaygateFreeKassa_Processor extends bdPaygate_Processor_Abstract
 
         // Сверяем нашу подпись с той, которую мы получили
         if ($crc != $signature) {
-            $this->_setError('Request not validated + ' . $crc . ' + ' . $signature);
+            $this->_setError("{$transactionId} Request not validated + " . $crc . ' + ' . $signature);
             return false;
         }
 
-        /// https://www.walletone.com/ru/merchant/documentation/#step5
+        /// https://www.free-kassa.ru/docs/api.php#step3
         // Платеж успешно проведен
         $itemId = $transactionDetails['MERCHANT_ORDER_ID'];
         $paymentStatus = bdPaygate_Processor_Abstract::PAYMENT_STATUS_ACCEPTED;
